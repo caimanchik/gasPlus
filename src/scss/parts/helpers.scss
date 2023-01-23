@@ -1,0 +1,62 @@
+.btn {
+    background-color: $blue;
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.45);
+    border-radius: 11px;
+    padding: 1.2rem 4.5em;
+    // overflow: hidden;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0.64em;
+        top: 0.64em;
+        width: calc(100% - 1.28em);
+        height: 50%;
+        background: url(../img/btn/button1.png) no-repeat 0 0/100% 100%;
+        z-index: 1;
+        transition: all ease .3s;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0.64em;
+        bottom: 0.64em;
+        width: calc(100% - 1.28em);
+        height: 25%;
+        background: url(../img/btn/button2.png) no-repeat 0 0/100% 100%;
+        z-index: 1;
+        transition: all ease .3s;
+    }
+    
+    &__frame {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/btn/frame.png) no-repeat 0 0/100% 100%;
+        z-index: 1;
+        transition: all ease .3s;
+    }
+    
+    &:hover {
+        &::after, &::before {
+            opacity: 0.8;
+            transform: scale(0.98);
+        }
+    }
+    
+    &__text {
+        background: transparent;
+        font-size: 1.57rem;
+        line-height: 1.23em;
+        color: $grey;
+        text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: 2;
+        max-width: 270px;
+        display: inline-block;
+    }
+}

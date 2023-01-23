@@ -6,59 +6,134 @@
         top: 24px;
     }
     &__content {
+        padding-top: 18px;
+        padding-bottom: 72px;
     }
     &__header {
+        margin-bottom: 33px;
     }
     &__delivery {
     }
     &__image {
+        position: absolute;
+        top: 19%;
+        left: 40%;
+        height: 80%;
+        width: auto;
     }
 }
-.container {
-}
+
 .call {
     &__number {
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 1.7rem;
+        line-height: 1.2em;
+        font-size: 1.7rem;
+        line-height: 2em;
     }
     &__text {
+        font-family: $openSans;
+        font-weight: 700;
+        font-size: 1.14rem;
+        line-height: 1.4em;
+        color: $blue;
+        text-decoration: underline;
     }
 }
 .header {
     &__row {
+        &:first-child {
+            display: flex;
+            align-items: flex-end;
+            gap: 45px;
+        }
     }
     &__logo {
     }
     &__devis {
+        position: relative;
+        font-size: 1.14rem;
+        line-height: 1.3em;
+        max-width: 130px;
+        color: $blue;
+        font-family: $openSans;
+        font-style: italic;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -21px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 33px;
+            background-color: #fff;
+        }
     }
     &__fueling {
+        margin-top: 8px;
     }
 }
+
 .logo {
 }
+
 .delivery {
     &__time {
+        margin-bottom: 12px;
     }
     &__title {
+        font-size: 4.57rem;
+        color: $blue;
+        max-width: 450px;
+        line-height: 1em;
+        margin-bottom: 14px;
     }
     &__text {
+        font-size: 1.7rem;
+        line-height: 1.2em;
+        max-width: 300px;
+        position: relative;
+        margin-bottom: 40px;
+        &::before {
+            content: '';
+            position: absolute;
+            right: -90px;
+            top: 0px;
+            width: 100px;
+            height: 90px;
+            // transform: rotate(45deg);
+            background: url(../img/about/path.svg);
+        }
     }
     &__delivery {
+        display: inline-block;
     }
     &__desc {
+        text-align: center;
+        font-size: 1.14rem;
+        line-height: 1.38em;
+        font-family: $openSans;
+        margin-top: 1rem;
     }
 }
 .time {
+    display: flex;
+    gap: 34px;
+    
     &__group {
+        display: flex;
+        flex-direction: column;
     }
     &__icons {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
     }
     &__text {
+        font-family: $openSans;
+        font-weight: 300;
+        font-size: 1.14rem;
+        color: $grey;
     }
-}
-.btn {
-    &__text {
-    }
-}
-.btn-relief {
 }
