@@ -1,0 +1,6 @@
+/node_modules
+/dist
+**.fig
+**.code-workspace
+/gulp
+**.DS_Store

@@ -1,0 +1,64 @@
+.about {
+    background-color: #2d2d2d;
+    &__call {
+        position: absolute;
+        right: 0;
+        top: 24px;
+    }
+    &__content {
+    }
+    &__header {
+    }
+    &__delivery {
+    }
+    &__image {
+    }
+}
+.container {
+}
+.call {
+    &__number {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    &__text {
+    }
+}
+.header {
+    &__row {
+    }
+    &__logo {
+    }
+    &__devis {
+    }
+    &__fueling {
+    }
+}
+.logo {
+}
+.delivery {
+    &__time {
+    }
+    &__title {
+    }
+    &__text {
+    }
+    &__delivery {
+    }
+    &__desc {
+    }
+}
+.time {
+    &__group {
+    }
+    &__icons {
+    }
+    &__text {
+    }
+}
+.btn {
+    &__text {
+    }
+}
+.btn-relief {
+}

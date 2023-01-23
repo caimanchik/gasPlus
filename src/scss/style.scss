@@ -1,0 +1,52 @@
+//* import shrifts and parts
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Russo+One&display=swap');
+
+@import "parts/nullstyle.scss";
+@import 'parts/helpers.scss';
+@import "parts/vars.scss";
+
+//* main vars
+
+$mw: 1140px;
+$fontfamily:'Russo One', sans-serif;
+$fontsize: 14px;
+
+$md1: $mw + 12px;
+$md2:992.98px;
+$md3:767.98px;
+$md4:479.98px;
+
+.container{ margin: 0 auto; max-width: $mw;
+	@media(max-width:$md1){max-width: 970px;};
+	@media(max-width:$md2){max-width: 750px;};
+	@media(max-width:$md3){max-width: none; padding: 0px 10px;};
+	position: relative;
+}
+
+html{
+	font-size: $fontsize;
+}
+
+body{
+	font-family: $fontfamily;
+	color: #F1F1F1;
+	&.lock{
+		overflow: hidden;
+	}
+}
+
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+}
+
+@media(max-width:$md3){
+	body.lock{
+		overflow: hidden;
+	}
+}
+
+//* parts of scss
+
+@import 'parts/about.scss';
