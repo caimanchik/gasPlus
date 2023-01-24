@@ -1,0 +1,83 @@
+.select {
+    padding: 2.43rem 0 2rem;
+    &__tracks {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.7rem;
+        gap: 1.7rem;
+        flex-wrap: wrap;
+    }
+    &__track {
+        width: 164px;
+        padding: 12px 0;
+        background: rgba(241, 241, 241, 0.2);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4px;
+        @media(max-width:$md4){
+            padding: 10px 0;
+            width: 130px;
+        }
+    }
+    &__images {
+        margin-top: 2.64rem;
+        position: relative;
+        height: 260px;
+        @media(max-width:$md3){
+            height: 200px;
+        }
+        
+        @media(max-width:$md4){
+            height: 170px;
+        }
+    }
+    &__image {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        height: 100%;
+        overflow: hidden;
+        transition: all ease .3s;
+        pointer-events: none;
+        
+        & > img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+        
+        &.selected {
+            opacity: 1;
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        transform: translateY(-40%);
+        @media(max-width:$md3){
+            transform: translateY(-40%);
+        }
+    }
+}
+
+.track {
+    font-size: 1.29rem;
+    opacity: 0.7;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+    transition: all ease .3s;
+    cursor: pointer;
+    
+    &.selected {
+        opacity: 1;
+        background-color: $blue;
+    }
+    &__name {
+    }
+    &__volume {
+    }
+}

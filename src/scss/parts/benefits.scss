@@ -1,0 +1,106 @@
+.benefits {
+    padding-top: 4rem;
+    &__list {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 2.14rem;
+        justify-content: center;
+    }
+    &__item {
+        flex: 0 0 33.3333%;
+        display: flex;
+        padding: 0 4rem;
+        flex-direction: column;
+        align-items: center;
+        @media(max-width:$md1){
+            padding: 0 3rem;
+        }
+        
+        @media(max-width:$md3){
+            flex: 0 0 50%;
+            padding: 0 2rem;
+        }
+        
+        @media(max-width:$md4){
+            padding: 0 0.5rem;
+        }
+    }
+    &__image {
+        // width: 100%;
+        // & > img {
+        //     width: auto;
+        //     height: auto;
+        //     object-fit: cover;
+        // }
+    }
+    &__benefit {
+        font-size: 1.7rem;
+        color: $blue;
+        text-align: center;
+        margin-top: 0.7rem;
+    }
+    &__info {
+        text-align: center;
+        margin-top: 1.2rem;
+        font-family: $openSans;
+        font-size: 1.14rem;
+        font-weight: 300;
+        line-height: 1.57rem;
+    }
+    &__garant {
+    }
+}
+
+.garant {
+    display: flex;
+    margin-top: 2.86rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    @media(max-width:$md3){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__image {
+        flex: 0 0 50%;
+        & > img {
+            width: 100%;
+            transform: translateX(40px);
+        }
+        @media(max-width:$md3){
+            flex: 0 0 80%;
+            order: 2;
+            margin-top: 20px;
+        }
+    }
+    &__info {
+        flex: 0 0 50%;
+        @media(max-width:$md3){
+            flex: 0 0 80%;
+        }
+    }
+    &__text {
+        font-size: 2.5rem;
+        line-height: 1.2em;
+    }
+    &__banner {
+        margin-top: 1.43rem;
+        background: $blue;
+        padding: 0.6rem 1rem;
+        min-height: 2.5rem;
+        font-size: 1rem;
+        font-family: $openSans;
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.2em;
+        @media(max-width:$md1){
+            width: 350px;
+        }
+        @media(max-width:$md3){
+            width: 100%;
+        }
+    }
+}

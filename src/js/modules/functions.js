@@ -12,3 +12,20 @@ export function isWebp() {
         document.documentElement.classList.add(className)
     });
 }
+
+export function selectChange() {
+    let tracks = document.querySelectorAll('.track');
+    let images = document.querySelectorAll('.select__image');
+    
+    tracks.forEach(el => {
+        el.addEventListener('click', e => {
+            images.forEach(i => i.classList.remove('selected'))
+            tracks.forEach(track => track.classList.remove('selected'))
+            
+            let id = el.getAttribute('select-for')
+            let image = document.getElementById(id)
+            image.classList.add('selected')
+            el.classList.add('selected')
+        })
+    })
+}

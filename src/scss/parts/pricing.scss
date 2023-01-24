@@ -1,17 +1,5 @@
 .pricing {
-    position: relative;
     padding: 3.2rem 0 6.86rem;
-
-    &::before {
-        content: "";
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        background: #2194ff;
-        opacity: 0.05;
-    }
     
     &::after {
         content: '';
