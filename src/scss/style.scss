@@ -6,31 +6,34 @@
 @import "parts/vars.scss";
 @import 'parts/helpers.scss';
 
-//* main vars
-
-$mw: 1140px;
-$fontfamily:'Russo One', sans-serif;
-$fontsize: 14px;
-
-$md1: $mw + 12px;
-$md2:992.98px;
-$md3:767.98px;
-$md4:479.98px;
+//* main styles
 
 .container{ margin: 0 auto; max-width: $mw;
 	@media(max-width:$md1){max-width: 970px;};
 	@media(max-width:$md2){max-width: 750px;};
-	@media(max-width:$md3){max-width: none; padding: 0px 10px;};
+	@media(max-width:$md3){max-width: none; padding: 0px 15px;};
 	position: relative;
 }
 
 html{
 	font-size: $fontsize;
+	@media(max-width:$md1){
+		font-size: $fontsize - 1px;
+	}
+	
+	@media(max-width:$md2){
+		font-size: $fontsize - 2px;
+	}
+	
+	@media(max-width:$md3){
+		font-size: $fontsize - 3px;
+	}
 }
 
 body{
 	font-family: $fontfamily;
 	color: #F1F1F1;
+    background-color: #2d2d2d;
 	&.lock{
 		overflow: hidden;
 	}
@@ -50,3 +53,5 @@ body{
 //* parts of scss
 
 @import 'parts/about.scss';
+@import 'parts/pricing.scss';
+@import 'parts/benefits.scss';

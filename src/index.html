@@ -3,7 +3,11 @@
         "title": "Атлант Газ"
     })
     <body>
-        @@include('html/about.html', {})
+        <main class="wrapper">
+            @@include('html/about.html', {})
+            @@include('html/pricing.html', {})
+            @@include('html/benefits.html', {})
+        </main>
         <script src="js/app.min.js"></script>
     </body>
 </html>
