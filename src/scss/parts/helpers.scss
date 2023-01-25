@@ -92,7 +92,7 @@
         flex-grow: 1;
     }
     
-    &:hover {
+    &:hover, &:focus {
         background-color: darken($blue, 10%);
     }
 }

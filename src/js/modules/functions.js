@@ -30,6 +30,19 @@ export function selectChange() {
     })
 }
 
+export function answerOpen() {
+    let quests = document.querySelectorAll('.question');
+    
+    quests.forEach(q => q.addEventListener('click', e => {
+        if (q.classList.contains('opened')) {
+            q.classList.remove('opened')
+        } else {
+            quests.forEach(el => el.classList.remove('opened'))
+            q.classList.add('opened')
+        }
+    }))
+}
+
 export class Slider {
     
     constructor() {

@@ -19,21 +19,55 @@
         // transform: ;
         width: 72px;
         height: 47px;
-        
+
         cursor: pointer;
-        
+
         & > img {
             width: 100%;
             height: 100%;
         }
+
+        @media (max-width: $md2) {
+            width: 65px;
+            height: 42px;
+        }
+
+        @media (max-width: $md3) {
+            width: 60px;
+            height: 38px;
+        }
+
+        @media (max-width: $md4) {
+            width: 54px;
+            height: 34px;
+        }
+
         &-next {
             right: 0;
             transform: translateY(-50%) rotate(-90deg);
+            @media (max-width: $md1) {
+                right: -15px;
+            }
+            @media (max-width: $md3) {
+                right: -10px;
+            }
+            @media (max-width: $md4) {
+                right: -13px;
+            }
         }
 
         &-prev {
             left: 0;
             transform: translateY(-50%) rotate(90deg);
+            @media (max-width: $md1) {
+                left: -15px;
+            }
+            @media (max-width: $md3) {
+                left: -10px;
+            }
+            @media (max-width: $md4) {
+                left: -13px;
+            }
         }
     }
     &__navigation {
@@ -41,6 +75,9 @@
         display: flex;
         justify-content: center;
         gap: 8px;
+        @media(max-width:$md3){
+            gap: 5px;
+        }
     }
     &__navigate {
         width: 60px;
@@ -48,10 +85,15 @@
         background: rgba(241, 241, 241, 0.2);
         border-radius: 20px;
         cursor: pointer;
-        transition: all ease .3s;
-        
+        transition: all ease 0.3s;
+
         &.selected {
             background-color: $blue;
+        }
+        
+        @media(max-width:$md3){
+            width: 40px;
+            height: 10px;
         }
     }
     &__slider {
@@ -59,6 +101,18 @@
         width: 840px;
         margin: 0 auto;
         position: relative;
+
+        @media (max-width: $md2) {
+            width: 650px;
+            height: 270px;
+            // height: 270px;
+            // height: 400px;
+        }
+        @media (max-width: $md3) {
+            width: 80%;
+            min-height: 400px;
+            // height: auto;
+        }
     }
     &__slide-visible {
         background-color: $grey;
@@ -84,7 +138,7 @@
             opacity: 0;
             z-index: 2;
         }
-        
+
         &.back {
             height: 80%;
             width: 100%;
@@ -98,14 +152,14 @@
             opacity: 1;
             z-index: 4;
         }
-        
+
         &.front {
             height: 100%;
             width: 90%;
             opacity: 1;
             z-index: 5;
         }
-        
+
         &.out {
             height: 100%;
             width: 90%;
@@ -118,15 +172,36 @@
 
 .slide {
     padding: 40px;
+    width: 100%;
+    height: 100%;
     &__wrap {
         display: flex;
         align-items: center;
+        width: 100%;
+        height: 100%;
+        @media (max-width: $md4) {
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        @media (max-width: $md3) {
+            // flex-direction: column;
+            display: block;
+        }
     }
     &__image {
         flex: 0 0 30%;
         border-radius: 20px;
         overflow: hidden;
 
+        @media (max-width: $md3) {
+            display: block;
+            height: 130px;
+            width: 110px;
+            margin: 0 auto;
+
+            // flex: 0 0 100%;
+        }
         & > img {
             width: 100%;
             height: 100%;
@@ -136,15 +211,25 @@
     &__content {
         flex: 0 0 70%;
         padding-left: 23px;
+        @media (max-width: $md3) {
+            padding-left: 0;
+        }
     }
     &__name {
         font-size: 1.7rem;
         color: $blue;
+        @media (max-width: $md3) {
+            margin-top: 10px;
+            text-align: center;
+        }
     }
     &__city {
         color: $black;
         font-size: 1.29rem;
         margin-top: 0.38em;
+        @media (max-width: $md3) {
+            text-align: center;
+        }
     }
     &__text {
         margin-top: 1.25em;

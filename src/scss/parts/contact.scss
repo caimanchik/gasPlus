@@ -1,0 +1,195 @@
+.contact {
+    padding: 3.93rem 0 2.5rem;
+    @media (max-width: $md3) {
+        padding: 3.93rem 2rem 2.5rem;
+    }
+    &__wrapper {
+        display: flex;
+        @media (max-width: $md3) {
+            display: block;
+        }
+    }
+    &__column {
+        flex: 0 0 50%;
+
+        &:nth-child(2) {
+            @media (max-width: $md3) {
+                margin-top: 1.6rem;
+            }
+        }
+    }
+    &__title {
+        font-size: 2.57rem;
+        @media (max-width: $md3) {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+    }
+    &__form {
+        margin-top: 2.57rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+    }
+    &__list {
+    }
+}
+
+.contact-form {
+    &__wrap {
+        width: 100%;
+        font-size: 1rem;
+        font-family: $openSans;
+        @media (max-width: $md3) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__input {
+        background-color: #fff;
+        border: 1px solid #dedede;
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 400px;
+        padding: 1.29rem 1.57rem;
+        font-size: 1rem;
+        @media (max-width: $md2) {
+            width: 300px;
+        }
+    }
+
+    &__text {
+        width: 400px;
+        height: 112px;
+        resize: none;
+        padding: 1.29rem 1.57rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        line-height: 1.2em;
+
+        @media (max-width: $md2) {
+            width: 300px;
+        }
+    }
+
+    &__wrap-text {
+    }
+    &__button {
+        @media (max-width: $md3) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.contact-image {
+    &__info {
+        position: absolute;
+        bottom: 40px;
+        left: 0px;
+        transform: translateX(-20%);
+        background-color: $blue;
+        padding: 1.57rem 1.1rem;
+        border-radius: 20px;
+        // @media (max-width: $md1) {
+        //     left: 30px;
+        // }
+
+        // @media (max-width: $md2) {
+        //     left: -20px;
+        // }
+        // @media (max-width: $md3) {
+        //     left: 20%;
+        // }
+    }
+
+    &__name {
+        font-size: 1.7rem;
+    }
+
+    &__post {
+        font-family: $openSans;
+        font-weight: 600;
+        font-size: 1.14rem;
+        margin-top: 0.4rem;
+    }
+
+    &__image-wrap {
+        position: relative;
+        width: 365px;
+        margin: 0 auto;
+        
+        @media (max-width: $md4) {
+            width: 280px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+        border-radius: 40px;
+        overflow: hidden;
+
+        & > img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
+
+.contact-list {
+    margin-top: 4.29rem;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+        width: 166px;
+        height: 66px;
+        background-color: $grey;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @media(max-width:$md4){
+            width: 130px;
+            height: 55px;
+        }
+
+        &:nth-child(1) {
+            .contact-list__image {
+                // height: 80%;
+                transform: translateY(-5%);
+            }
+        }
+        &:nth-child(3) {
+            .contact-list__image {
+                // height: 60%;
+                transform: translateY(-5%);
+            }
+        }
+        &:nth-child(4) {
+            .contact-list__image {
+                // height: 80%;
+                transform: translateY(-10%);
+            }
+        }
+        &:nth-child(6) {
+            .contact-list__image {
+                // height: 60%;
+                transform: translateY(-15%);
+            }
+        }
+    }
+    &__image {
+        text-align: center;
+        & > img {
+            height: 100%;
+            width: 90%;
+            
+        }
+    }
+}
