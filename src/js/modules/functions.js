@@ -146,3 +146,32 @@ export class Slider {
         }, 500);
     }
 }
+
+export function activateModal() {
+    
+    let modal = document.querySelector('.modal');
+    let body = document.querySelector('body');
+    let closeElem = document.querySelector('.modal__close');
+    let buttons = document.querySelectorAll('#modal');
+    let container = document.querySelector('.modal__container');
+    
+    function close() {
+        modal.classList.remove('visible')
+        body.classList.remove('lock')
+    }
+    
+    function open() {
+        buttons.forEach(button => {
+            button.addEventListener('click', e => {
+                body.classList.add('lock')
+                modal.classList.add('visible')
+            })
+        })
+    }
+    
+    closeElem.addEventListener('click', close)
+    modal.addEventListener('click', close)
+    container.addEventListener('click', e => e.stopPropagation())
+    
+    open()
+}

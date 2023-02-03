@@ -6,6 +6,14 @@
     overflow: hidden;
     position: relative;
     
+    &__modal {
+        padding: 2.1rem;
+        
+        @media(max-width:$md3){
+            padding: 1.7rem;
+        }
+    } 
+    
     &-gas {
         padding: 1.6rem 4.5rem;
     }
